@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Dekko&display=swap');
+
+:root {
+  --red-color: #b3000c;
+  --green-color: #206f6c;
+  --dark-text-color:rgb(44, 35, 27);
+  --light-text-color:rgb(133, 92, 56);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+
+body {
+  font-family: 'Dancing Script', cursive;
+  background: url("/img/bg.jpg") no-repeat center center fixed;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*Card*/
+#cardflip {
+  width: 500px;
+  height: 560px;
+  position: relative;
+  perspective: 2500px;
+  cursor: pointer;
+  margin-top: 70px;
+}
+
+#card1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform-origin: left center;
+}
+
+#card1.flip {
+  transition: transform 1s;
+  transform:rotateY(-120deg);
+}
+
+#card1 div,.inside {
+width: 100%;
+height:100%;
+position:absolute;
+left:0;
+top:0;
+color:#fff;
+backface-visibility: hidden;
+}
+
+.front {
+background: url(/img/front-bg.png) no-repeat center/cover;
+border-radius: 0 5px 5px 0;
+box-shadow: inset 5px 0px 15px 15px rgba(117, 93, 77, 0.408);
+}
+
+.front-content h1 {
+  color: var(--green-color);
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+  line-height: 1.3;
+  margin-left: 15px;
+}
+
+.h1-span {
+  font-family: 'Dekko', cursive;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: var(--red-color);
+}
+
+.back {
+background: url(/img/red-bg.png) no-repeat center/cover;
+box-shadow: inset 5px 0px 15px 15px rgba(123, 29, 6, 0.245);
+transform:rotateY(180deg);
+border-radius: 5px 0 0 5px;
+}
+
+.inside {
+backface-visibility: visible;
+background: url(/img/inside-bg.jpg) no-repeat center/cover;
+box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.537), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 0 5px 5px 0;
+}
+
+.inside-content {
+  margin: 5rem 1rem;
+  font-size: 1.5rem;
+  line-height: 2;
+  text-align: center;
+  color: var(--dark-text-color);
+}
+
+.inside-text {
+  padding: 2rem 4rem;
+}
+
+.pf-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--light-text-color);
+}
+
+.name {
+  font-size: 1.7rem;
+}
+
+/*Instruction and snow effect*/
+.instruction {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  margin-top: 1rem;
+}
+
+#snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/*Media queries*/
+@media screen and (max-width: 600px) {
+  #cardflip {
+    width: 425px;
+    height: 530px;
+  }
+}
