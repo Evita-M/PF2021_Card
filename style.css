@@ -22,7 +22,7 @@
 
 body {
   font-family: 'Dancing Script', cursive;
-  background: url("/img/bg.jpg") no-repeat center center fixed;  
+  background: url("img/bg.jpg") no-repeat center center fixed;  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,7 +65,7 @@ backface-visibility: hidden;
 }
 
 .front {
-background: url(/img/front-bg.png) no-repeat center/cover;
+background: url("img/front-bg.png") no-repeat center/cover;
 border-radius: 0 5px 5px 0;
 box-shadow: inset 5px 0px 15px 15px rgba(117, 93, 77, 0.408);
 }
@@ -87,7 +87,7 @@ box-shadow: inset 5px 0px 15px 15px rgba(117, 93, 77, 0.408);
 }
 
 .back {
-background: url(/img/red-bg.png) no-repeat center/cover;
+background: url("img/red-bg.png") no-repeat center/cover;
 box-shadow: inset 5px 0px 15px 15px rgba(123, 29, 6, 0.245);
 transform:rotateY(180deg);
 border-radius: 5px 0 0 5px;
@@ -95,7 +95,7 @@ border-radius: 5px 0 0 5px;
 
 .inside {
 backface-visibility: visible;
-background: url(/img/inside-bg.jpg) no-repeat center/cover;
+background: url("img/inside-bg.jpg") no-repeat center/cover;
 box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.537), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 border-radius: 0 5px 5px 0;
 }
